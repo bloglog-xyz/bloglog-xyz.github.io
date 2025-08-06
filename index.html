@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Orbit with Center Text</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--   <img src="https://websitesite.xyz/palebluedot/palebluedot.jpg" width="100%" height="100%"> -->
+  
+  <div class="orbit-container">
+    <!-- 중앙 고정 텍스트 -->
+    <div class="center-text">blog</div>
+    
+  <div class="orbit-center">
+
+      <!-- 궤도 위의 log 요소들 -->
+  <div class="link link-1"><span>log</span></div>
+  <div class="link link-2"><span>log</span></div>
+  <div class="link link-3"><span>log</span></div>
+  <div class="link link-4"><span>log</span></div>
+  <div class="link link-5"><span>log</span></div>
+  <div class="link link-6"><span>log</span></div>
+  <div class="link link-7"><span>log</span></div>
+  <div class="link link-8"><span>log</span></div>
+  <div class="link link-9"><span>log</span></div>
+  <div class="link link-10"><span>log</span></div>
+    </div>
+  </div>
+
+
+<!--   <ul>
+    <li>/jisu</li>
+  </ul>
+ -->
+<script>
+  const liElements = document.querySelectorAll('ul li');
+
+  liElements.forEach(li => {
+    const maxX = window.innerWidth - 100;  // li의 대략적인 폭 여유
+    const maxY = window.innerHeight - 30;  // li의 높이 여유
+    const randX = Math.floor(Math.random() * maxX);
+    const randY = Math.floor(Math.random() * maxY);
+
+    li.style.left = `${randX}px`;
+    li.style.top = `${randY}px`;
+  });
+</script>
+
+</body>
+
+
+</html>
