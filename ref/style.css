@@ -1,0 +1,68 @@
+		*{
+ margin : 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    background-color: royalblue;
+    word-break: keep-all;
+}
+
+.index {
+    position: absolute;
+    height: 100%;
+    width: 300px;
+    border-right: 1px solid white;
+}
+
+ol {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.post {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    padding: 20px;
+}
+
+.content {
+    display: none;
+    height: 100%;
+  /*  overflow-y:auto;*/
+}
+
+.content:target {
+    display: block;
+}
+
+a {
+    color: white;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+
+span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+mark {
+    background-color: white;
+}
+
+@media screen and (max-width: 704px) {
+
+}
