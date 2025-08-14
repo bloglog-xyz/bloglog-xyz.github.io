@@ -1,51 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Bloglog</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-  <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<title>bloglog.xyz/ref</title>
+	<meta name="description" content="설명">
+	<meta name="keywords" content="키워드1, 키워드2">
+	<meta property="og:image" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" href="">
+
 </head>
 <body>
-  
-  <div class="orbit-container">
-    <!-- 중앙 고정 텍스트 -->
-    <div class="center-text">bloglog.xyz</div>
-    
-  <div class="orbit-center">
 
-      <!-- 궤도 위의 log 요소들 -->
-  <div class="link link-1"><span><a href="ref/index.html">/ref</a></span></div>
-  <div class="link link-2"><span>/eunah</span></div>
-  <div class="link link-3"><span>/deqque</span></div>
-  <div class="link link-4"><span>/daya</span></div>
-  <div class="link link-5"><span>/eunyaki</span></div>
-  <div class="link link-6"><span>/jisu</span></div>
-  <div class="link link-7"><span>/log</span></div>
-  <div class="link link-8"><span>/log</span></div>
-  <div class="link link-9"><span>/log</span></div>
-  <div class="link link-10"><span>/log</span></div>
+<div class="index">
+  <mark>bloglog.xyz</mark>
+  <br><br>
+
+  <mark>Handmade Blogs</mark>
+  <ol>
+    <li><a href="#handmade-blogs-1">allenbukoff.com/lunch.html</a></li>
+    <li><a href="#handmade-blogs-2">notebook.wesleyac.com</a></li>
+    <li><a href="#handmade-blogs-3">jordy.news</a></li>
+    <li><a href="#handmade-blogs-4">notebooks.laurel.world/pomera/notes</a></li>
+    <li><a href="#handmade-blogs-5">archive.elliott.computer/emergency.industries/diaries/seed-diary</a></li>
+    <li><a href="#handmade-blogs-6">memory.elliott.computer</a></li>
+    <li><a href="#handmade-blogs-7">irl-to-url.com</a></li>
+    <li><a href="#handmade-blogs-8">jisu.today/bag</a></li>
+  </ol>
+
+
+<mark>Reading</mark>
+  <ol>
+    <li><a href="#reading-1">A blog about blogging</a>
+      <br><a href="#reading-1-kr">블로깅에 대한 블로그</a></li>
+
+    <li><a href="#reading-2">SeMA 비평연구 프로젝트: 2022 라운드테이블 2. 아마추어리즘과 비평</a></li>
+
+    <li><a href="#reading-3">Blogging thoughts: personal publication as an online research tool</a></li>
+  </ol>
+
+<mark>Tools</mark>
+  <ol>
+    <li>Text Editor: <a href="https://www.sublimetext.com/">Sublime Text</a></li>
+    <li>Server: <a href="https://github.com/">Github</a></li>
+  </ol>
+
+</div>
+
+
+
+
+<div class="post">
+  <div class="content" id="handmade-blogs-1">
+    <iframe src="http://www.allenbukoff.com/lunch.html"></iframe>
   </div>
 
-<!--   <ul>
-    <li>/jisu</li>
-  </ul>
- -->
+  <div class="content" id="handmade-blogs-2">
+    <iframe src="https://notebook.wesleyac.com"></iframe>
+  </div>
+
+  <div class="content" id="handmade-blogs-3">
+    <iframe src="https://jordy.news/"></iframe>
+  </div>
+
+  <div class="content" id="handmade-blogs-4">
+    <iframe src="https://notebooks.laurel.world/pomera/notes/"></iframe>
+  </div>
+
+  <div class="content" id="handmade-blogs-5">
+    <iframe src="https://archive.elliott.computer/emergency.industries/diaries/seed-diary/"></iframe>
+  </div>
+
+   <div class="content" id="handmade-blogs-6">
+    <iframe src="https://memory.elliott.computer"></iframe>
+  </div>
+
+  <div class="content" id="handmade-blogs-7">
+    <iframe src="https://websitesite.xyz/irl-to-url/"></iframe>
+  </div>
+
+  <div class="content" id="handmade-blogs-8">
+    <iframe src="https://jisu.today/bag"></iframe>
+  </div>
+
+
+
+
+
+	<div class="content" id="reading-1">
+		<iframe src="https://write-yourself-in.blogspot.com"></iframe>
+	</div>
+
+  <div class="content" id="reading-1-kr">
+    <iframe src="https://docs.google.com/document/d/1xjqkF0F5Cz539HlEu39e8HS5vQ1IqbUouqoh_IKk054/edit?usp=sharing"></iframe>
+  </div>
+
+	<div class="content" id="reading-2">
+		<iframe src="http://semacoral.org/features/sema-art-criticism-research-2022-roundtable-2-amateur-criticism-critic"></iframe>
+	</div>
+
+  <div class="content" id="reading-3">
+    <iframe src="https://bora.uib.no/bora-xmlui/bitstream/handle/1956/13070/Blogging-Thoughts.pdf"></iframe>
+  </div>
+
+</div>
+
 <script>
-  const liElements = document.querySelectorAll('ul li');
+  // 모바일(폭 704px 이하)에서 인덱스 링크 클릭 시
+  // 해당 섹션의 iframe src 주소로 직접 이동
+  (function () {
+    function isMobile() { return window.innerWidth <= 704; }
 
-  liElements.forEach(li => {
-    const maxX = window.innerWidth - 100;  // li의 대략적인 폭 여유
-    const maxY = window.innerHeight - 30;  // li의 높이 여유
-    const randX = Math.floor(Math.random() * maxX);
-    const randY = Math.floor(Math.random() * maxY);
-
-    li.style.left = `${randX}px`;
-    li.style.top = `${randY}px`;
-  });
+    document.querySelectorAll('.index a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        if (!isMobile()) return; // 데스크톱은 기존 방식 유지 (#target)
+        e.preventDefault();
+        var targetId = this.getAttribute('href').slice(1);
+        var iframe = document.querySelector('#' + targetId + ' iframe');
+        if (iframe && iframe.src) {
+          window.location.href = iframe.src; // 해당 사이트로 바로 이동
+        }
+      });
+    });
+  })();
 </script>
 
 </body>
-
-
 </html>
