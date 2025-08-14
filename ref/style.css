@@ -71,10 +71,10 @@ mark {
     border-right: none;
   }
   .post {
-    display: none;   /* 모바일에서는 오른쪽 iframe 영역 숨김 */
+    display: none;  
   }
-  ol {               /* 목록 여백 살짝 줄이기(선택) */
-    margin-left: 10px;
+
+  ol {               
     padding: 12px;
   }
 
