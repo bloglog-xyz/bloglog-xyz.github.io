@@ -64,5 +64,20 @@ mark {
 }
 
 @media screen and (max-width: 704px) {
+  .index {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
+  .post {
+    display: none;   /* 모바일에서는 오른쪽 iframe 영역 숨김 */
+  }
+  ol {               /* 목록 여백 살짝 줄이기(선택) */
+    margin-left: 10px;
+    padding: 12px;
+  }
 
 }
+
+

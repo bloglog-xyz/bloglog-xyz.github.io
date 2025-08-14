@@ -106,6 +106,25 @@
 
 </div>
 
+<script>
+  // 모바일(폭 704px 이하)에서 인덱스 링크 클릭 시
+  // 해당 섹션의 iframe src 주소로 직접 이동
+  (function () {
+    function isMobile() { return window.innerWidth <= 704; }
+
+    document.querySelectorAll('.index a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        if (!isMobile()) return; // 데스크톱은 기존 방식 유지 (#target)
+        e.preventDefault();
+        var targetId = this.getAttribute('href').slice(1);
+        var iframe = document.querySelector('#' + targetId + ' iframe');
+        if (iframe && iframe.src) {
+          window.location.href = iframe.src; // 해당 사이트로 바로 이동
+        }
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
