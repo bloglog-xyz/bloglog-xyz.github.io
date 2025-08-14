@@ -102,3 +102,29 @@ a:visited {
   color: white;
 }
 
+/* 모바일 화면에서 지름 줄이기 */
+@media (max-width: 600px) {
+  .orbit-container {
+    width: 300px;   /* 가로 폭 줄임 */
+    height: 240px;  /* 세로 폭 줄임 */
+  }
+
+  /* 궤도 반경 줄이기 */
+  .link.link-1  { transform: rotate(0deg) translateX(150px) rotate(-0deg); }
+  .link.link-2  { transform: rotate(36deg) translateX(150px) rotate(-36deg); }
+  .link.link-3  { transform: rotate(72deg) translateX(150px) rotate(-72deg); }
+  .link.link-4  { transform: rotate(108deg) translateX(150px) rotate(-108deg); }
+  .link.link-5  { transform: rotate(144deg) translateX(150px) rotate(-144deg); }
+  .link.link-6  { transform: rotate(180deg) translateX(150px) rotate(-180deg); }
+  .link.link-7  { transform: rotate(216deg) translateX(150px) rotate(-216deg); }
+  .link.link-8  { transform: rotate(252deg) translateX(150px) rotate(-252deg); }
+  .link.link-9  { transform: rotate(288deg) translateX(150px) rotate(-288deg); }
+  .link.link-10 { transform: rotate(324deg) translateX(150px) rotate(-324deg); }
+
+  /* 글씨 크기도 살짝 줄이기 */
+  .orbit-center .link span {
+    font-size: 12px;
+  }
+}
+
+
