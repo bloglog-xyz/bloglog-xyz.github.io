@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: oldlace;
+  font-family: monospace;
+  font-size: 9pt;
+  line-height: 12pt;
+  word-break: keep-all;
+
+}
+
+a {
+    color: forestgreen;
+}
+
+
+a:hover {
+    background-color: forestgreen;
+    color: white;
+}
+
+figure {
+  display: inline-block;   /* figure가 이미지 크기에 맞게 줄어듦 */
+  text-align: center;      /* 캡션을 이미지 중앙에 정렬 */
+  margin: 0;
+}
+
+img {
+  max-width: 300px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+}
+
+figcaption {
+  position: relative;
+  text-align: center;
+}
+
+
+footer {
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 704px) {
+
+}

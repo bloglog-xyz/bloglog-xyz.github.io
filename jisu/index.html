@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>bloglog.xyz/jisu</title>
+	<meta name="description" content="설명">
+	<meta name="keywords" content="키워드1, 키워드2">
+	<meta property="og:image" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" href="">
+
+</head>
+<body>
+
+<!--  _ __   __ ___   __
+| '_ \ / _` \ \ / /
+| | | | (_| |\ V / 
+|_| |_|\__,_| \_/   -->
+
+<div class="nav">
+	<h1><a href="https://bloglog.xyz/">bloglog.xyz</a></h1> 
+	<br><h1><a href="https://bloglog.xyz/jisu">/jisu</a></h1>
+
+	<details open>
+		<summary>posts</summary>
+		<li><a href="#2025-08-07">2025-08-07</a></li>
+	</details>
+</div>
+
+
+<!--                  _   
+ _ __   ___  ___| |_ 
+| '_ \ / _ \/ __| __|
+| |_) | (_) \__ \ |_ 
+| .__/ \___/|___/\__|
+|_|   -->
+
+<div class="post">
+  <div class="content" id="2025-08-07">
+    <iframe src="2025-08-07.html"></iframe>
+  </div>
+</div>
+
+
+<script>
+  // 모바일(폭 704px 이하)에서 인덱스 링크 클릭 시
+  // 해당 섹션의 iframe src 주소로 직접 이동
+  (function () {
+    function isMobile() { return window.innerWidth <= 704; }
+
+    document.querySelectorAll('.index a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        if (!isMobile()) return; // 데스크톱은 기존 방식 유지 (#target)
+        e.preventDefault();
+        var targetId = this.getAttribute('href').slice(1);
+        var iframe = document.querySelector('#' + targetId + ' iframe');
+        if (iframe && iframe.src) {
+          window.location.href = iframe.src; // 해당 사이트로 바로 이동
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
