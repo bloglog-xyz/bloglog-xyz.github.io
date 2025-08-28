@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="index">
+<div class="nav">
   <mark>bloglog.xyz</mark>
   <br><br>
 
@@ -44,12 +44,11 @@
   <ol>
     <li>Text Editor: <a href="https://www.sublimetext.com/">Sublime Text</a></li>
     <li>Server: <a href="https://github.com/">Github</a></li>
+    <li>Blog sample: <a href="https://drive.google.com/drive/folders/1bY7FlrCtu92O6-p6BRuIp36W35eLRvPx?usp=sharing">Drive</a></li>
+
   </ol>
 
 </div>
-
-
-
 
 <div class="post">
   <div class="content" id="handmade-blogs-1">
@@ -85,9 +84,6 @@
   </div>
 
 
-
-
-
 	<div class="content" id="reading-1">
 		<iframe src="https://write-yourself-in.blogspot.com"></iframe>
 	</div>
@@ -112,7 +108,7 @@
   (function () {
     function isMobile() { return window.innerWidth <= 704; }
 
-    document.querySelectorAll('.index a[href^="#"]').forEach(function(a){
+    document.querySelectorAll('.nav a[href^="#"]').forEach(function(a){
       a.addEventListener('click', function(e){
         if (!isMobile()) return; // 데스크톱은 기존 방식 유지 (#target)
         e.preventDefault();
